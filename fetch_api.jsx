@@ -4,7 +4,31 @@
 //import { Test } from './test.jsx';
 const {useState, useEffect } = React;
 
+function Christmas({ text }) {
 
+  const [color, setColor] = useState('header green');
+
+  setInterval(switchColor, 650, color, setColor);
+
+  return (
+    <div className={color}>
+      {text}
+    </div>
+  );
+}
+
+function switchColor(color, setColor) {
+  let newColor = color;
+  if (newColor == 'header green') {
+    newColor = 'header white';
+  } else if (newColor == 'header white') {
+    newColor = 'header red';
+  } else if (newColor == 'header red') {
+    newColor = 'header green';
+  }
+  //console.log(newColor);
+  setColor(newColor);
+}
 
 function Header() {
   return (
