@@ -1,29 +1,18 @@
 //Ejemplo FETCH - Obtiene información desde JokeAPI https://sv443.net/jokeapi/v2/
 // cd /c/rcl/rcl/'emeritus mit'/'jsx react'/fetch_api
 
+//import { Test } from './test.jsx';
 const {useState, useEffect } = React;
 
-function Christmas({ text }) {
-  return (
-    <>{text}</>
-  );
-}
+
 
 function Header() {
   return (
     <h3>      
       Random
-      <div className="header green"> C</div>
-      <div className="header red">H</div>
-      <div className="header white">R</div>
-      <div className="header green">I</div>
-      <div className="header red">S</div>
-      <div className="header white">T</div>
-      <div className="header green">M</div>
-      <div className="header red">A</div>
-      <div className="header white">S</div>
+      <Christmas text=' CHRISTMAS' />
       <div className="header"> Joke</div>      
-      {/* <Christmas text={'CHRISTMAS'} /> */}
+      
     </h3>
   );
 }
@@ -69,8 +58,7 @@ function App() {
   
   return (
     <>
-      <Header />      
-
+      <Header />
       <div>
         Joke:        
         <Joke />
